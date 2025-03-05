@@ -1,0 +1,168 @@
+/* Estilos generales */
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#game-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo más oscuro para contraste */
+    border: 2px solid rgba(255, 204, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.stats p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.stats span {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+#timer {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 1.8rem;
+    color: #ffcc00;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+#answer {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+#feedback {
+    font-weight: bold;
+    color: #ff5733;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+}
+
+#puzzle-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+    gap: 5px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.puzzle-piece {
+    width: 70px;
+    height: 70px;
+    background-color: #ccc;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Efecto hover para las piezas */
+.puzzle-piece:hover {
+    transform: scale(1.1);
+    background-color: #e6e6e6;
+}
+
+/* Mostrar imágenes en las piezas descubiertas */
+.puzzle-piece.revealed {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ffcc00;
+}
+
+/* Efecto al descubrir una pieza */
+.puzzle-piece.revealed:hover {
+    transform: scale(1.05);
+}
+
+/* Animación para el mensaje de correcto o incorrecto */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#feedback.correcto {
+    color: #28a745;
+    animation: bounce 0.5s ease-in-out;
+}
+
+#feedback.incorrecto {
+    color: #dc3545;
+    animation: bounce 0.5s ease-in-out;
+}

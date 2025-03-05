@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Matemático 🎮</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Juego Matemático 🎮</h1>
+        <div id="game-container">
+            <div class="stats">
+                <p>Nivel: <span id="level">1</span></p>
+                <p>Puntuación: <span id="score">0</span></p>
+                <p>Intentos: <span id="attempts">4</span></p>
+                <p id="timer">Tiempo: <span>60</span> segundos</p>
+            </div>
+            <div id="question-container">
+                <p id="question"></p>
+                <input type="text" id="answer" placeholder="Tu respuesta">
+                <button onclick="verificarRespuesta()">Responder</button>
+            </div>
+            <p id="feedback"></p>
+        </div>
+        <div id="puzzle-container">
+            <h2>Rompecabezas</h2>
+            <div id="puzzle-grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
